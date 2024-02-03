@@ -49,10 +49,10 @@ def readfile():
 # Delete current plan in Textbox
 def deleteplan():
     Textbox.delete("1.0", "end")
-    Textbox.insert("1.0", "Urgent and Important:\n-\n-\n")
-    Textbox.insert("4.0", "Urgent but Not Important:\n-\n-\n")
-    Textbox.insert("7.0", "Not Urgent but Important:\n-\n-\n")
-    Textbox.insert("10.0", "Neither Urgent Nor Important:\n-\n-\n")
+    Textbox.insert("1.0", "Urgent and Important:\n- \n- \n")
+    Textbox.insert("4.0", "Urgent but Not Important:\n- \n- \n")
+    Textbox.insert("7.0", "Not Urgent but Important:\n- \n- \n")
+    Textbox.insert("10.0", "Neither Urgent Nor Important:\n- \n- \n")
 
 
 # Add bullet points in new line on 'Enter' key press
@@ -69,24 +69,23 @@ def change_language():
     else:
         English()
 
-
+# Change to English
 def English():
     global IsEnglish
-    Textbox.delete("1.0", "end")
-    Textbox.insert("1.0", "Urgent and Important:\n-\n-\n")
-    Textbox.insert("4.0", "Urgent but Not Important:\n-\n-\n")
-    Textbox.insert("7.0", "Not Urgent but Important:\n-\n-\n")
-    Textbox.insert("10.0", "Neither Urgent Nor Important:\n-\n-\n")
+    Textbox.insert("1.0", "Urgent and Important:\n- \n- \n")
+    Textbox.insert("4.0", "Urgent but Not Important:\n- \n- \n")
+    Textbox.insert("7.0", "Not Urgent but Important:\n- \n- \n")
+    Textbox.insert("10.0", "Neither Urgent Nor Important:\n- \n- \n")
     IsEnglish = True
 
-
+# Change to Chinese
 def Chinese():
     global IsEnglish
     Textbox.delete("1.0", "end")
-    Textbox.insert("1.0", "紧急且重要:\n-\n-\n")
-    Textbox.insert("4.0", "紧急但不重要:\n-\n-\n")
-    Textbox.insert("7.0", "不紧急但重要:\n-\n-\n")
-    Textbox.insert("10.0", "不紧急且不重要:\n-\n-\n")
+    Textbox.insert("1.0", "紧急且重要:\n- \n- \n")
+    Textbox.insert("4.0", "紧急但不重要:\n- \n- \n")
+    Textbox.insert("7.0", "不紧急但重要:\n- \n- \n")
+    Textbox.insert("10.0", "不紧急且不重要:\n- \n- \n")
     IsEnglish = False
 
 
@@ -106,10 +105,10 @@ label = customtkinter.CTkLabel(root, text="J Planner", font=("微软雅黑", 22)
 Textbox = customtkinter.CTkTextbox(
     root, height=500, font=("微软雅黑", 18), width=500, corner_radius=10
 )
-Textbox.insert("1.0", "Urgent and Important:\n-\n-\n")
-Textbox.insert("4.0", "Urgent but Not Important:\n-\n-\n")
-Textbox.insert("7.0", "Not Urgent but Important:\n-\n-\n")
-Textbox.insert("10.0", "Neither Urgent Nor Important:\n-\n-\n")
+Textbox.insert("1.0", "Urgent and Important:\n- \n- \n")
+Textbox.insert("4.0", "Urgent but Not Important:\n- \n- \n")
+Textbox.insert("7.0", "Not Urgent but Important:\n- \n- \n")
+Textbox.insert("10.0", "Neither Urgent Nor Important:\n- \n- \n")
 
 # Create buttons for functions
 button1 = customtkinter.CTkButton(
@@ -149,7 +148,6 @@ button4 = customtkinter.CTkButton(
     height=10,
 )
 
-# Place a Textbox for user input
 Textbox.bind("<Return>", on_enter)
 
 
