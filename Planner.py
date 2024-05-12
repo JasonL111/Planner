@@ -72,6 +72,7 @@ def change_language():
 # Change to English
 def English():
     global IsEnglish
+    Textbox.delete("1.0", "end")
     Textbox.insert("1.0", "Urgent and Important:\n- \n- \n")
     Textbox.insert("4.0", "Urgent but Not Important:\n- \n- \n")
     Textbox.insert("7.0", "Not Urgent but Important:\n- \n- \n")
