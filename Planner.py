@@ -31,6 +31,7 @@ def create_popup(message):
 
 # Load plan from a file
 def readfile():
+    Textbox.delete("1.0", "end")
     today = datetime.now().strftime("%Y-%m-%d")
     filename = f"{today}.txt"
 
